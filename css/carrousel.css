@@ -1,0 +1,111 @@
+@import url(style.css);
+.peliculas-recomendadas{
+    margin-bottom: 70px;
+    
+
+}
+.peliculas-recomendadas .contenedor-principal{
+    display: flex;
+    align-items: center;
+    position: relative;
+    
+    
+}
+.flecha-izquierda, .flecha-derecha{
+    position: absolute;
+    border: none;
+    background-color:rgba(0, 0, 0, 0.3);
+    font-size: 40px;
+    height: 50%;
+    top: calc(50% - 25%);
+    line-height:40px ;
+    width: 50px;
+    color:aliceblue;
+    cursor: pointer;
+    z-index: 500;
+    transition: .2s ease all;
+    
+} 
+.flecha-izquierda{
+left: 0;
+}
+.flecha-derecha{
+    right: 0;
+    }
+    .flecha-izquierda:hover, .flecha-derecha:hover{
+        background: rgba(0, 0, 0, 0.8);
+
+    }    
+
+/* Titulo y controles     */
+.contenedor-titulo-controles{
+   display: flex; 
+   justify-content: space-between;
+   align-items: end;
+}
+
+
+.contenedor-titulo-controles h3{
+    color: var(--primary-color);
+    font-size: 30px;
+    padding-left: 15px;
+}
+.indicadores{
+    padding-right: 15px;
+}
+.indicadores button{
+    background: var(--primary-color);
+    height: 3px;
+    width: 15px;
+    cursor: pointer;
+    border: none;
+    margin-right: 2px;
+}
+.indicadores button:hover,
+.indicadores button.active{
+    background: var(--third-color) ;
+}
+
+/* Peliculas */
+.contenedor-carousel{
+ width: 100%;
+ padding: 20px 0;
+ overflow-x: scroll;
+ overflow-y: visible;
+ scroll-behavior: smooth;
+ scrollbar-width: none; /* Firefox */
+ -ms-overflow-style: none;  /* Internet Explorer y Edge */
+
+ /* Para navegadores WebKit (Chrome, Safari, etc.) */
+ &::-webkit-scrollbar {
+     display: none;
+}}
+.carousel{
+   display: flex; 
+   flex-wrap: nowrap;
+}
+.pelicula{
+    width: 20%;
+    transition: .3s ease all;
+    box-shadow: 5px 5px 10px  rgba(0, 0, 0, 0.3);
+}
+ .pelicula:hover{
+    transform: scale(1.1); /* Por ejemplo, aumentar el tamaño al hacer hover */
+    transition: transform 0.3s ease;
+} 
+
+@media screen and (max-width: 800px) {
+    .contenedor-carousel{
+        overflow: visible;
+    }
+    .carousel{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    .indicadores,
+    .flecha-derecha,
+    .flecha-izquierda{
+       display: none; 
+    }
+}

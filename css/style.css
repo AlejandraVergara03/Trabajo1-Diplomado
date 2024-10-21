@@ -1,0 +1,70 @@
+:root {
+    --primary-color: #1c508d;
+    --secondary-color: #3273dc;
+    --danger-color: #e74c3c;
+    --third-color: gold;
+    --info-color: #8e44ad;
+    --success-color: #2ecc71;
+    --light-color: #ecf0f1;
+    --dark-color: #34495e;
+    --black: #000000;
+}
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Inter", sans-serif;
+}
+
+h3{
+    color: var(--primary-color);
+    font-size: 30px;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+/* Footer Styles */
+
+/* .footer-section {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-section h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon img {
+    width: 24px;
+    height: 24px;
+    filter: invert(100%);
+}
+ */
